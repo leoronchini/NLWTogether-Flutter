@@ -1,10 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:payflow/shared/themes/app_colors.dart';
+import 'package:payflow/shared/themes/app_images.dart';
 
-class SpashPage extends StatelessWidget {
-  const SpashPage({Key? key}) : super(key: key);
-//49mins
+class SplashPage extends StatelessWidget {
+  const SplashPage({Key key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      backgroundColor: AppColors.background,
+      body: Stack(
+        children: [
+          Center(child: Image.asset(AppImages.union)),
+          Center(child: Image.asset(AppImages.logoFull)),
+        ],
+      ),
+    );
   }
 }
